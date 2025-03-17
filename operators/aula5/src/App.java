@@ -10,6 +10,9 @@ public class App {
         System.out.println(isEqual ? "VERDADEIRO" : "FALSO");
         isEqual = number1 < number2;
         System.out.println(isEqual ? "VERDADEIRO" : "FALSO");
+        String nome1 = "victor";
+        String nome2 = "albuquerque";
+        System.out.println(nome1.equals(nome2)); //strings tem o método "equals"
 
     }
 }
