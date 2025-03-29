@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "aula2/src",
+        "aula3/src"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
