@@ -20,4 +20,8 @@ public class BankAccount {
     public void withdrawMoney(double money) {
         this.balance -= money;
     }
+
+    public void payBillet(Billet billet) {
+        this.balance -= billet.getPrice();  
+    }
 }
