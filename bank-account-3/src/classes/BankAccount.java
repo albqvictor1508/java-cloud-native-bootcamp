@@ -13,5 +13,11 @@ public class BankAccount {
         System.out.println("Hello, " + name + ", you have " + balance + " USD");
     }
 
+    public void depositMoney(double money) {
+        this.balance += money;
+    }
 
+    public void withdrawMoney(double money) {
+        this.balance -= money;
+    }
 }
