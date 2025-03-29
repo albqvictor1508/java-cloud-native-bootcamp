@@ -7,4 +7,6 @@ public class BankAccount {
     public void checkBalance() {
         System.out.println("Hello, " + name + ", you have " + balance + " USD");
     }
+
+    
 }
