@@ -6,8 +6,14 @@ public class Petshop {
     private List<Pet> pets;
     private int water = 30;
     private int shampoo = 10;
+    private boolean isDirty = false;
 
     public void bathingPet() {
+        if(this.isDirty == true) {
+            System.out.println("Clear the machine to clear pets");
+            return;
+        }
+
         if(pets.size() == 0) {
             System.out.println("The list of pets is empty");
         }
@@ -32,7 +38,13 @@ public class Petshop {
             System.out.println("The list of pets is empty");
             return;
         }
-        pets.remove(pets.size() - 1);
+        Pet pet = pets.remove(pets.size() - 1);
+        if(pet.getDirty() == true) {
+            System.out.println("The pet has been removed while it was dirty! now clean the machine");
+            this.isDirty = true;
+            return;
+        }
+        System.out.println("Pet removed!");
     }
 
     public void verifyWater() {
@@ -40,6 +52,22 @@ public class Petshop {
     }
     public void verifyShampoo() {
         System.out.println(this.shampoo + "L of shampoo in machine");
+    }
+    public void cleanMachine() {
+        if(this.isDirty == false) {
+            System.out.println("The machine is clean");
+            return;
+        }
+        if(this.shampoo == 0) {
+            System.out.println("add more shampoo to clean the machine");
+        }
+        if(this.water == 0) {
+            System.out.println("add more watter to clean the machine");
+        }
+        this.shampoo -= 1;
+        this.water -= 3;
+        this.isDirty = false;
+        System.out.println("The machine has been cleaned!");
     }
     public void addShampo(int shampoo) {
         if(shampoo >= 10) {
