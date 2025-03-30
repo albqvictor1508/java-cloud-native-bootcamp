@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "inheritance-polymorphism/aula1/src",
         "aula3/src",
         "aula2/src",
-        "inheritance-polymorphism/aula1/src"
+        "abstract-classes/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
