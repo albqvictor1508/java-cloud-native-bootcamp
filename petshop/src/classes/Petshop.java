@@ -41,4 +41,31 @@ public class Petshop {
     public void verifyShampoo() {
         System.out.println(this.shampoo + "L of shampoo in machine");
     }
+    public void addShampo(int shampoo) {
+        if(shampoo >= 10) {
+            System.out.println("The shampoo limit is 10L");
+            return;
+        }
+        if(this.shampoo >= 10) {
+            this.shampoo = 10;
+            System.out.println("max amount of shampoo");
+            return;
+        }
+        this.shampoo += shampoo;
+        System.out.println("Shampoo added!");
+    }
+
+    public void addWater(int water) {
+        if(water >= 10) {
+            System.out.println("The water limit is 30L");
+            return;
+        }
+        if(this.water >= 10) {
+            this.water = 10;
+            System.out.println("max amount of watter");
+            return;
+        }
+        this.water += water;
+        System.out.println("Watter added!");
+    }
 }
