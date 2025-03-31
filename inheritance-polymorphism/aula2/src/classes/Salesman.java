@@ -1,6 +1,6 @@
 package classes;
 
-public class Salesman extends Employee {
+public non-sealed class Salesman extends Employee {
     private int percentPerSold;
     
     public Salesman(String name, String surname, String phone, double salary) {
