@@ -1,6 +1,6 @@
 package classes;
 
-public non-sealed class Teacher extends Person {
+public non-sealed class Teacher extends Person3 {
     private String role;
     private double salary;
 
