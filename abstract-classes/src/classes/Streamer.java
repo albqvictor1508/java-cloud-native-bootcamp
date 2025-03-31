@@ -1,6 +1,6 @@
 package classes;
 
-public non-sealed class Streamer extends Person {
+public non-sealed class Streamer extends Person3 {
     private String channel;
     private int views;
 
