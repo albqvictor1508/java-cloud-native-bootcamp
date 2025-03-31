@@ -1,16 +1,19 @@
 package classes;
 
-public class Employee {
-    private final String name;
-    private final String surname;
+public sealed class Employee permits Manager, Salesman {
+    private String name;
     private String phone;
     private double salary;
 
-    public Employee(String name, String surname, String phone, double salary) {
+    // public Employee(String name, String surname, String phone, double salary) {
+    //     this.name = name;
+    //     this.surname = surname;
+    //     this.phone = phone;
+    //     this.salary = salary;
+    // }
+
+    public void setName(String name) {
         this.name = name;
-        this.surname = surname;
-        this.phone = phone;
-        this.salary = salary;
     }
 
     public void setPhone(String phone) {
@@ -29,8 +32,5 @@ public class Employee {
     }
     public double getSalary() {
         return salary;
-    }
-    public String getSurname() {
-        return surname;
     }
 }
