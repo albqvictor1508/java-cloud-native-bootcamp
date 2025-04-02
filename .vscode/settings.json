@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "tickets/src"
+        "tickets/src",
+        "user-type/src"
     ]
 }
