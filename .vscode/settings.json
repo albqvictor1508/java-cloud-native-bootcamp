@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
+        "inheritance-polymorphism/aula2/src",
         "inheritance-polymorphism/aula1/src",
         "aula3/src",
         "aula2/src",
         "abstract-classes/src",
-        "inheritance-polymorphism/aula2/src"
+        "interfaces-lambda/aula1/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
