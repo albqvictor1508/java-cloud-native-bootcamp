@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "user-type/src",
         "tickets/src",
-        "user-type/src"
+        "clock/src"
     ]
 }
