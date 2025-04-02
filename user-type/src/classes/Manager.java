@@ -1,25 +1,21 @@
 package classes;
 
 public class Manager extends Employee {
-    private boolean isAdmin = true;
-        
+    
     public Manager(String name, String email, String password) {
         super(name, email, password);
+        super.setIsAdmin(true);
     }
 
-    public boolean getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void generateFinancialReport() {
-        //nem sei oque tem que fazer aqui
+    public void generateFinancialReport(double sales, double balance) {
+        System.out.println("Financial Report: " + sales + " sales, " + balance + " balance in cash machine");
     }
 
     public boolean checkIsLogged() {
         return this.getIsLogged();
     }
 
-    public void consultSales(Salesman salesman) {
-        System.out.println(salesman.getSales() + " sales made with success");
+    public void consultSales(double sales) {
+        System.out.println(sales + " sales made with success");
     }
 }

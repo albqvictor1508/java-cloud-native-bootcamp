@@ -5,11 +5,20 @@ public class Employee {
     private String email;
     private String password;
     private boolean isLogged = false;
+    private boolean isAdmin = false;
 
     public Employee(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     public void setIsLogged(boolean isLogged) {
