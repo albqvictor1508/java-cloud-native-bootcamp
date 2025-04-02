@@ -3,5 +3,11 @@
         "user-type/src",
         "tickets/src",
         "clock/src"
-    ]
+        "inheritance-polymorphism/aula1/src",
+        "aula3/src",
+        "aula2/src",
+        "abstract-classes/src",
+        "inheritance-polymorphism/aula2/src"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
