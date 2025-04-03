@@ -1,5 +1,5 @@
 package classes;
 
 public interface Product {
-    void tax();
+    double getValueWithTax(double value);
 }

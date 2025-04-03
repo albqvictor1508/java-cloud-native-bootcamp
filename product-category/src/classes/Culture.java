@@ -1,6 +1,6 @@
 package classes;
 
-public class Alimentation  implements Product {
+public class Culture  implements Product {
     private double tax = 4;
 
     @Override

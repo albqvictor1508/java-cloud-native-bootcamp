@@ -1,7 +1,7 @@
 package classes;
-
-public class Alimentation  implements Product {
-    private double tax = 4;
+   
+public class Health  implements Product {
+    private double tax = 1.5;
 
     @Override
     public double getValueWithTax(double value) {
