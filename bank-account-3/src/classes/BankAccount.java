@@ -1,7 +1,6 @@
 package classes;
 
 public class BankAccount {
-<<<<<<< HEAD
     private String name;
     private double balance;
     private double specialCheckLimit = 0.0;
@@ -59,7 +58,4 @@ public class BankAccount {
     public double getTax() {
         return tax;
     }
-=======
-    private double balance;
->>>>>>> poo
 }
