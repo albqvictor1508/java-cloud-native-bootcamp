@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "interfaces-lambda/aula4/src",
         "interfaces-lambda/aula3/src",
         "interfaces-lambda/aula2/src",
         "interfaces-lambda/aula1/src",
@@ -8,7 +9,7 @@
         "aula3/src",
         "aula2/src",
         "abstract-classes/src",
-        "interfaces-lambda/aula4/src"
+        "collections/aula2/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
