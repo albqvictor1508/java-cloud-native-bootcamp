@@ -6,12 +6,15 @@
         "interfaces-lambda/aula1/src",
         "inheritance-polymorphism/aula2/src",
         "inheritance-polymorphism/aula1/src",
+        "collections/set/aula2/src",
+        "collections/aula6/src",
+        "collections/aula5/src",
         "collections/aula4/src",
         "collections/aula2/src",
         "aula3/src",
         "aula2/src",
         "abstract-classes/src",
-        "collections/aula5/src"
+        "collections/set/aula1/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
