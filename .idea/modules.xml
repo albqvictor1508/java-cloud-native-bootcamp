@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/abstract-classes/abstract-classes.iml" filepath="$PROJECT_DIR$/abstract-classes/abstract-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/aula1/aula1.iml" filepath="$PROJECT_DIR$/collections/aula1/aula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interfaces-lambda/aula3/aula10.iml" filepath="$PROJECT_DIR$/interfaces-lambda/aula3/aula10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interfaces-lambda/aula4/aula11.iml" filepath="$PROJECT_DIR$/interfaces-lambda/aula4/aula11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula3/aula12.iml" filepath="$PROJECT_DIR$/aula3/aula12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula2/aula13.iml" filepath="$PROJECT_DIR$/aula2/aula13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/aula2/aula2.iml" filepath="$PROJECT_DIR$/collections/aula2/aula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/aula3/aula3.iml" filepath="$PROJECT_DIR$/collections/aula3/aula3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/aula4/aula4.iml" filepath="$PROJECT_DIR$/collections/aula4/aula4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/aula5/aula6.iml" filepath="$PROJECT_DIR$/collections/aula5/aula6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inheritance-polymorphism/aula2/aula7.iml" filepath="$PROJECT_DIR$/inheritance-polymorphism/aula2/aula7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interfaces-lambda/aula2/aula8.iml" filepath="$PROJECT_DIR$/interfaces-lambda/aula2/aula8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inheritance-polymorphism/aula1/aula9.iml" filepath="$PROJECT_DIR$/inheritance-polymorphism/aula1/aula9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enums/enums.iml" filepath="$PROJECT_DIR$/enums/enums.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/poo.iml" filepath="$PROJECT_DIR$/.idea/poo.iml" />
+    </modules>
+  </component>
+</project>
