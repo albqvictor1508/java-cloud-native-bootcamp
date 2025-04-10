@@ -17,4 +17,12 @@ public class ContactMap {
       contacts.remove(name);
     };
   }
+
+  public void showContacts() {
+    System.out.println(contacts);
+  }
+
+  public void searchByName(String name) {
+    contacts.containsValue(name);
+  }
 }
