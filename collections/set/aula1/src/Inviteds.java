@@ -14,4 +14,12 @@ public class Inviteds {
             }
         }
     }
+
+    public int countInviteds() {
+        return this.inviteds.size();
+    }
+
+    public void showInviteds() {
+        System.out.println(this.inviteds);
+    }
 }

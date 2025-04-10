@@ -20,4 +20,9 @@ public class Invited {
     public String getInviteCode() {
         return inviteCode;
     }
+
+    @Override
+    public String toString() {
+        return "Invited[" + name + ", " + age + ", "+ inviteCode + "]";
+    }
 }
