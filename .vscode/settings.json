@@ -7,6 +7,7 @@
         "inheritance-polymorphism/aula2/src",
         "inheritance-polymorphism/aula1/src",
         "collections/set/aula2/src",
+        "collections/set/aula1/src",
         "collections/aula6/src",
         "collections/aula5/src",
         "collections/aula4/src",
@@ -14,7 +15,7 @@
         "aula3/src",
         "aula2/src",
         "abstract-classes/src",
-        "collections/set/aula1/src"
+        "collections/set/aula3/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
