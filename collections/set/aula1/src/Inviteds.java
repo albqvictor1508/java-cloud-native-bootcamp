@@ -8,16 +8,19 @@ public class Inviteds {
         this.inviteds = new HashSet<>();
     }
 
-    public void addNewInvited(Invited invited) {
-        this.inviteds.add(invited);
+    public void addNewInvited(String name, int age, String inviteCode) {
+        this.inviteds.add(new Invited(name, age, inviteCode));
     }
 
-    public void removeInvitedByInviteCode(String inviteCode) {
+    public void removeInvitedByInviteCode(int inviteCode) {
+        Invited invitedToRemove = null;
         for(Invited i : this.inviteds) {
-            if(i.getInviteCode().equalsIgnoreCase(inviteCode)) {
-                this.inviteds.remove(i);
+            if(i.getInviteCode() == inviteCode) {
+                invitedToRemove = i;
+                break;
             }
         }
+        this.inviteds.remove(invitedToRemove);
     }
 
     public int countInviteds() {

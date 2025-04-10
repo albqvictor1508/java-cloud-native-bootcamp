@@ -1,9 +1,9 @@
 public class Invited {
     private String name;
     private int age;
-    private String inviteCode;
+    private int inviteCode;
 
-    public Invited(String name, int age, String inviteCode) {
+    public Invited(String name, int age, int inviteCode) {
         this.name = name;
         this.age = age;
         this.inviteCode = inviteCode;
@@ -17,7 +17,7 @@ public class Invited {
         return name;
     }
 
-    public String getInviteCode() {
+    public int getInviteCode() {
         return inviteCode;
     }
 
