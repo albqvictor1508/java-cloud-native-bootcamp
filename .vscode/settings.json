@@ -9,10 +9,11 @@
       "collections/set/aula3/src",
       "collections/set/aula2/src",
       "collections/set/aula1/src",
+      "collections/map/aula1/src",
       "aula3/src",
       "aula2/src",
       "abstract-classes/src",
-      "collections/map/aula1/src"
+      "collections/map/aula2/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
