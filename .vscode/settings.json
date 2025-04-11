@@ -1,21 +1,20 @@
 {
     "java.project.sourcePaths": [
-        "interfaces-lambda/aula4/src",
-        "interfaces-lambda/aula3/src",
-        "interfaces-lambda/aula2/src",
-        "interfaces-lambda/aula1/src",
-        "inheritance-polymorphism/aula2/src",
-        "inheritance-polymorphism/aula1/src",
-        "collections/set/aula2/src",
-        "collections/set/aula1/src",
-        "collections/aula6/src",
-        "collections/aula5/src",
-        "collections/aula4/src",
-        "collections/aula2/src",
-        "aula3/src",
-        "aula2/src",
-        "abstract-classes/src",
-        "collections/set/aula3/src"
+      "interfaces-lambda/aula4/src",
+      "interfaces-lambda/aula3/src",
+      "interfaces-lambda/aula2/src",
+      "interfaces-lambda/aula1/src",
+      "inheritance-polymorphism/aula2/src",
+      "inheritance-polymorphism/aula1/src",
+      "collections/set/aula3/src",
+      "collections/set/aula2/src",
+      "collections/set/aula1/src",
+      "collections/map/aula2/src",
+      "collections/map/aula1/src",
+      "aula3/src",
+      "aula2/src",
+      "abstract-classes/src",
+      "collections/set/aula4/src"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
