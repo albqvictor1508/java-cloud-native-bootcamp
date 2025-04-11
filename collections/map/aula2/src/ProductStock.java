@@ -23,10 +23,11 @@ public class ProductStock {
     }
 
     public void showMoreExpensive() {
-        double biggerPrice = 0d;
+        Productt moreExpensiveProduct = null;
+        double biggerPrice = Double.MIN_VALUE;
         for(Productt p : products.values()) {
             if(biggerPrice < p.getPrice() * p.getQuantity()) {
-                biggerPrice = p.getPrice() * p.getQuantity();
+                 moreExpensiveProduct = p;
             }
         }
     } 
