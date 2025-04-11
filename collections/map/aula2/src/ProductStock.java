@@ -3,14 +3,14 @@ import java.util.Map;
 
 public class ProductStock {
     private Map<String, Productt> products;
-    private double totalPrice = 0;
+    private double totalPrice = 0d;
 
     public ProductStock() {
         products = new HashMap<>();
     }
 
     public void addNewProduct(String name, double price, int quantity, long code) {
-        totalPrice += price;
+        totalPrice += price * quantity;
         products.put(name, new Productt(code, quantity, price));
     }
 
@@ -23,6 +23,11 @@ public class ProductStock {
     }
 
     public void showMoreExpensive() {
-        for(String //continuar isso aq)
+        double biggerPrice = 0d;
+        for(Productt p : products.values()) {
+            if(biggerPrice < p.getPrice() * p.getQuantity()) {
+                biggerPrice = p.getPrice() * p.getQuantity();
+            }
+        }
     } 
 }
