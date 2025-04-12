@@ -13,7 +13,7 @@ public class ConsumerExample {
       }
     };
 
-    numbers1.stream().forEach(getEvenNumbers);
+    numbers1.forEach(getEvenNumbers);
     numbers2.stream().forEach(number -> { // como pode ver, eu simplesmente podia fazer isso
       if(number % 2 == 0) {
         System.out.println(number);
