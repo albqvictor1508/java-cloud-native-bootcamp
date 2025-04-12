@@ -35,4 +35,8 @@ public class App {
     public List<Integer> removeOddNumbers(List<Integer> numbers) {
       return numbers.stream().filter(n -> n % 2 != 0).toList();
     }
+
+    public Integer sumDivisableFor3And5(List<Integer> numbers) {
+      return numbers.stream().filter(n -> n % 3 == 0 && n % 5 == 0).reduce(0, (count,value) -> count + value);
+    }
 }
