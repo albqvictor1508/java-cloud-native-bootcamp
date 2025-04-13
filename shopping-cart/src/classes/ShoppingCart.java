@@ -8,7 +8,7 @@ public class ShoppingCart {
     private double cartAmount;
 
     public void addNewProduct(Product product) {
-        this.products.add(new Product(product.name(), product.amount(), product.quantity()));
+        this.products.add(product);
         this.cartAmount += product.amount() * product.quantity();
     }
 
