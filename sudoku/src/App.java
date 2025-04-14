@@ -8,6 +8,9 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import model.Board;
+import model.Space;
+
 public class App {
     private final static Scanner scanner = new Scanner(System.in);
     private static Board board;

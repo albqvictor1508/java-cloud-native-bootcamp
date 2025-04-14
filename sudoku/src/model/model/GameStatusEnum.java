@@ -1,3 +1,4 @@
+package model;
 public enum GameStatusEnum {
     NON_STARTED("Não iniciado"),
     COMPLETED("Completo"),

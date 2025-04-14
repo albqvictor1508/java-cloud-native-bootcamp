@@ -1,22 +1,27 @@
 package ui.input;
 
-import static java.util.Objects.isNull;
+import java.awt.Dimension;
+import java.awt.Font;
 
-import java.util.List;
+import javax.swing.JTextField;
 
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.PlainDocument;
+import model.Space;
 
-public class NumberText extends PlainDocument {
-    private final List<String> NUMBERS = List.of("","","","","","","","","");
+public class NumberText extends JTextField {
+    private Space space;
 
-    @Override
-    public void insertString(int offs, String str, AttributeSet a) throws BadLocationException {
-        if(isNull(str) || (!NUMBERS.contains(str))) return;
-
-        if(getLength() + str.length() <= 1) {
-            super.insertString(offs, str, a);
+    public NumberText(final Space space) {
+        this.space = space;
+        Dimension dimension = new Dimension(50,50);
+        this.setSize(dimension);
+        this.setPreferredSize(dimension);
+        this.setVisible(true);
+        this.setFont(new Font("Arial", Font.PLAIN, 20));
+        this.setDocument(new NumberTextLimit());
+        this.setEnabled(!space.isFixed());
+        
+        if(space.isFixed()) {
+            this.setText(space.getActual().toString());
         }
     }
 }

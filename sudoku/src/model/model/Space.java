@@ -1,3 +1,4 @@
+package model;
 public class Space {
     private final int expected;
     private Integer actual;
