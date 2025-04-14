@@ -52,4 +52,8 @@ public class Board {
         space.clearSpace();
         return true;
     }
+
+    public void reset() {
+        spaces.forEach(c -> c.forEach(r -> r.clearSpace()));
+    }
 }
