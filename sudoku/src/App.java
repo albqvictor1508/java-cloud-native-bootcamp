@@ -88,6 +88,18 @@ public class App {
     }
 
     private static void removeNumber() {
+        if(isNull(board)) {
+            System.out.println("O jogo ainda não foi iniciado");
+            return;
+        }
+        System.out.println("Informe a coluna em que o número está inserido");
+        int col = runUntilGetValidNumber(0, 8);
+        System.out.println("Informe a linha em que o número está inserido");
+        int row = runUntilGetValidNumber(0, 8);
+        
+        if(!board.clearValue(col, row)) {
+            System.out.printf("A posição [%s, %s] tem um valor fixo!", col, row);
+        }
     }
 
     private static Object finishGame() {
