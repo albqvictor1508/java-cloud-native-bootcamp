@@ -33,13 +33,23 @@ public class Board {
             .anyMatch(s -> nonNull(s.getActual()) && s.getActual().equals(s.getExpected()));
     }
 
-    public boolean changeValue(final int col, final int row, final Integer value) {
+    public boolean changeValue(final int col, final int row, final int value) {
         Space space = spaces.get(col).get(row);
         if(space.isFixed()) {
             return false;
         }
 
         space.setActual(value);
+        return true;
+    }
+
+    public boolean clearValue(final int col, final int row) {
+        Space space = spaces.get(col).get(row);
+        if(space.isFixed() || isNull(space)) {
+            return false;
+        }
+
+        space.clearSpace();
         return true;
     }
 }
