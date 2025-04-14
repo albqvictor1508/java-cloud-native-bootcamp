@@ -1,3 +1,4 @@
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 import java.util.ArrayList;
@@ -41,11 +42,10 @@ public class App {
         }
     }
     private static void startGame(final Map<String, String> positions) {
-        if(nonNull(positions)) {
+        if(nonNull(board)) {
             System.out.println("O jogo já foi iniciado");
             return;
         }
-
         List<List<Space>> spaces = new ArrayList<>();
         for(int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
@@ -56,16 +56,38 @@ public class App {
                 Space currentSpace = new Space(expected, fixed);
                 spaces.get(i).add(currentSpace);
             }
-
             board = new Board(spaces);
             System.out.println("O jogo está pronto para começar!");
-        }
-        
+        }   
     }
 
-    private static Object inputNumber() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'inputNumber'");
+    private static void inputNumber() {
+        if(isNull(board)) {
+            System.out.println("O jogo ainda não foi iniciado");
+            return;
+        }
+        System.out.println("Informe a coluna em que o número será inserido");
+        int col = runUntilGetValidNumber(0, 8);
+        System.out.println("Informe a linha em que o número será inserido");
+        int row = runUntilGetValidNumber(0, 8);
+        System.out.printf("Informe a linha em que estará na posição [%s, %s]\n", col, row);
+        int value = runUntilGetValidNumber(1,9);
+        if(!board.changeValue(col, row, value)) {
+            System.out.printf("A posição [%s, %s] tem um valor fixo!", col, row);
+        }
+    }
+
+    //tratar erro caso usuário mande string, pra n quebrar o sudoku
+    private static int runUntilGetValidNumber(final int min, final int max) {
+        int current = scanner.nextInt();
+        while (current < min || current > max) {
+            System.out.printf("Informe um número entre %s e &s\n", min, max);
+            current = scanner.nextInt();
+        }
+        return current;
+    }
+
+    private static void removeNumber() {
     }
 
     private static Object finishGame() {
@@ -84,10 +106,4 @@ public class App {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'showCurrentGame'");
     }
-    private static Object removeNumber() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeNumber'");
-    }
-
-
 }
