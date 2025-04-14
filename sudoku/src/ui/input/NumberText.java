@@ -47,7 +47,8 @@ public class NumberText extends JTextField {
             public void changedUpdate(DocumentEvent e) {
                 changeSpace();
             }
-            
         });
+
+        
     }
 }

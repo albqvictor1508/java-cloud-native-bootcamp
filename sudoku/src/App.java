@@ -47,23 +47,7 @@ public class App {
     }
 
     private static void startGame(final Map<String, String> positions) {
-        if(nonNull(board)) {
-            System.out.println("O jogo já foi iniciado");
-            return;
-        }
-        List<List<Space>> spaces = new ArrayList<>();
-        for(int i = 0; i < BOARD_LIMIT; i++) {
-            spaces.add(new ArrayList<>());
-            for(int j = 0; j < BOARD_LIMIT; j++) {
-                String positionsConfig = positions.get("%s %s".formatted(i,j));
-                int expected = Integer.parseInt(positionsConfig.split(",")[0]);
-                boolean fixed = Boolean.parseBoolean(positionsConfig.split(",")[1]);
-                Space currentSpace = new Space(expected, fixed);
-                spaces.get(i).add(currentSpace);
-            }
-            board = new Board(spaces);
-            System.out.println("O jogo está pronto para começar!");
-        }
+
     }
 
     private static void inputNumber() {
