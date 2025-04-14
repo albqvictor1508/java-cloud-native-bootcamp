@@ -19,6 +19,10 @@ import ui.panel.MainPanel;
 public class MainScreen {
     private final BoardService boardService;
     private static Dimension dimension = new Dimension(600,600);
+    private JButton checkGameStatusBtn;
+    private JButton finishGameBtn;
+    private JButton resetBtn;
+
 
     public MainScreen(final Map<String, String> gameConfig) {
         this.boardService = new BoardService(gameConfig);
@@ -35,7 +39,7 @@ public class MainScreen {
     }
 
     private void addCheckGameStatusBtn(final JPanel mainPanel) {
-        JButton checkGameStatusBtn = new CheckGameStatusBtn(e -> {
+        checkGameStatusBtn = new CheckGameStatusBtn(e -> {
             boolean hasErrors = boardService.hasErrors();
             GameStatusEnum gameStatus = boardService.getStatus();
             var message = switch(gameStatus) {
@@ -50,14 +54,19 @@ public class MainScreen {
     }
 
     private void addFinishGameBtn(final JPanel mainPanel) {
-        JButton finishGameBtn = new FinishGameBtn(e -> {
-
+        finishGameBtn = new FinishGameBtn(e -> {
+            if(boardService.gameIsFinished()) {
+                JOptionPane.showMessageDialog(null, "Parabéns, você venceu o jogo!");
+                resetBtn.setEnabled(false);
+                checkGameStatusBtn.setEnabled(false);
+                resetBtn.setEnabled(false);
+            }
         });
         mainPanel.add(finishGameBtn);
     }
 
     private void addResetBtn(final JPanel mainPanel) {
-        JButton resetBtn = new ResetBtn(e -> {
+        resetBtn = new ResetBtn(e -> {
             int dialogResult = JOptionPane.showConfirmDialog(null, "Deseja realmente reiniciar o jogo?", "Reiniciar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 
             if(dialogResult == 0) {
