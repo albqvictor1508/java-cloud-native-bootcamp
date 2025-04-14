@@ -7,6 +7,7 @@ import javax.swing.border.LineBorder;
 import static java.awt.Color.black;
 
 public class SudokuSector extends JPanel {
+
   public SudokuSector() {
     Dimension dimension = new Dimension(170, 170);
     this.setSize(dimension);
