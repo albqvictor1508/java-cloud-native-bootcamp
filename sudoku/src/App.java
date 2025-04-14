@@ -29,7 +29,7 @@ public class App {
             int option = scanner.nextInt();
 
             switch (option) {
-                case 1 -> startGame();
+                case 1 -> startGame(positions);
                 case 2 -> inputNumber();
                 case 3 -> removeNumber();
                 case 4 -> showCurrentGame();

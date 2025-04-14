@@ -1,4 +1,4 @@
-package ui.frame;
+package ui.panel;
 
 import javax.swing.JPanel;
 
