@@ -96,10 +96,27 @@ public class App {
         int col = runUntilGetValidNumber(0, 8);
         System.out.println("Informe a linha em que o número está inserido");
         int row = runUntilGetValidNumber(0, 8);
-        
+
         if(!board.clearValue(col, row)) {
             System.out.printf("A posição [%s, %s] tem um valor fixo!", col, row);
         }
+    }
+
+    private static void showCurrentGame() {
+        if(isNull(board)) {
+            System.out.println("O jogo ainda não foi iniciado");
+            return;
+        }
+        var args = new Object[81];
+        var argPos = 0;
+        for (int i = 0; i < BOARD_LIMIT; i++) {
+            for(List<Space> col: board.getSpaces()) {
+                args[argPos++] = " " + ((isNull(col.get(i).getActual())) ? " " : col.get(i).getActual());
+            }
+            System.out.println("Seu jogo se encontra da seguinte forma:");
+            System.out.printf((BoardTemplate.BOARD_TEMPLATE) + "%n", args);
+        }
+
     }
 
     private static Object finishGame() {
@@ -114,8 +131,5 @@ public class App {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'showGameStatus'");
     }
-    private static Object showCurrentGame() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showCurrentGame'");
-    }
+
 }
