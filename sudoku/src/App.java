@@ -12,6 +12,7 @@ public class App {
     private final static Scanner scanner = new Scanner(System.in);
     private static Board board;
     private final static int BOARD_LIMIT = 9;
+
     public static void main(String[] args) throws Exception {
         final Map<String, String> positions = Stream.of(args).collect(Collectors.toMap(k -> k.split(";")[0], v -> v.split(";")[1]));
         while (true) {
@@ -35,12 +36,13 @@ public class App {
                 case 5 -> showGameStatus();
                 case 6 -> clearGame();
                 case 7 -> finishGame();
-            
+
                 case 8 -> System.exit(0);
                 default -> System.out.println("Opção inválida, selecione novamente.");
             }
         }
     }
+
     private static void startGame(final Map<String, String> positions) {
         if(nonNull(board)) {
             System.out.println("O jogo já foi iniciado");
@@ -50,7 +52,7 @@ public class App {
         for(int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
             for(int j = 0; j < BOARD_LIMIT; j++) {
-                String positionsConfig = positions.get("%s %s".formatted(i,j)); 
+                String positionsConfig = positions.get("%s %s".formatted(i,j));
                 int expected = Integer.parseInt(positionsConfig.split(",")[0]);
                 boolean fixed = Boolean.parseBoolean(positionsConfig.split(",")[1]);
                 Space currentSpace = new Space(expected, fixed);
@@ -58,7 +60,7 @@ public class App {
             }
             board = new Board(spaces);
             System.out.println("O jogo está pronto para começar!");
-        }   
+        }
     }
 
     private static void inputNumber() {
@@ -119,17 +121,52 @@ public class App {
 
     }
 
-    private static Object finishGame() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'finishGame'");
+    private static void showGameStatus() {
+      if(isNull(board)) {
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+      }
+
+      System.out.printf("O status é: %s", board.getStatus().getLabel());
+      if(board.hasErrors()) {
+        System.out.println("O jogo tem erros");
+        return;
+      }
+      System.out.println("O jogo não tem erros");
     }
-    private static Object clearGame() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'clearGame'");
+
+    private static void clearGame() {
+      System.out.println("Tem certeza de que deseja apagar seu jogo? (sim, nao)");
+      String confirm = scanner.next();
+
+      while (!confirm.equalsIgnoreCase("sim") && !confirm.equalsIgnoreCase("nao")) {
+        System.out.println("Opção inválida, digite novamente");
+        scanner.next();
+      }
+      if(confirm.equalsIgnoreCase("sim")) {
+        board.reset();
+      }
+  }
+
+    private static void finishGame() {
+      if(isNull(board)) {
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+      }
+      if(board.hasErrors()) {
+        System.out.println("Seu jogo contém erros");
+        return;
+      }
+
+      if(board.gameIsFinished()) {
+        System.out.println("Parabéns você concluiu o jogo");
+        showCurrentGame();
+        board = null;
+        return;
+      }
+
+      System.out.println("Deve tá faltando algum espaço");
     }
-    private static Object showGameStatus() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showGameStatus'");
-    }
+
 
 }
