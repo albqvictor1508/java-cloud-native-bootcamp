@@ -32,6 +32,10 @@ public class BoardService {
         return board.gameIsFinished();
     }
 
+    public void reset() {
+        board.reset();
+    }
+
     private List<List<Space>> initBoard(Map<String, String> gameConfig) {
         List<List<Space>> spaces = new ArrayList<>();
         for(int i = 0; i < BOARD_LIMIT; i++) {
