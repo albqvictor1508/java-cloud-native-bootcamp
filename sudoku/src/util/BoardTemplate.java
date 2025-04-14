@@ -1,4 +1,5 @@
 public class BoardTemplate {
+    private BoardTemplate() {}
     public final static String BOARD_TEMPLATE =
     """
     *************************************************************************************
