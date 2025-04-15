@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+<<<<<<< HEAD
       "interfaces-lambda/aula4/src",
       "interfaces-lambda/aula3/src",
       "interfaces-lambda/aula2/src",
@@ -18,3 +19,11 @@
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
+=======
+        "sudoku/src/utils",
+        "sudoku/src/util",
+        "sudoku/src/model",
+        "sudoku/src"
+    ]
+}
+>>>>>>> 53217cc3c250fe20fd11d9246d90cc48981f1e12
