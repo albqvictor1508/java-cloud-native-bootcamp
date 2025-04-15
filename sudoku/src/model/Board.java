@@ -23,7 +23,8 @@ public class Board {
             return GameStatusEnum.NON_STARTED;
         }
 
-        return spaces.stream().flatMap(Collection::stream).anyMatch(s -> isNull(s.getActual())) ? GameStatusEnum.INCOMPLETED : GameStatusEnum.COMPLETED;
+        return spaces.stream().flatMap(Collection::stream)
+                .anyMatch(s -> isNull(s.getActual())) ? GameStatusEnum.INCOMPLETED : GameStatusEnum.COMPLETED;
     }
 
     public boolean hasErrors() {

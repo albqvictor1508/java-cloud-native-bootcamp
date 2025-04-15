@@ -24,7 +24,7 @@ public class MainScreen {
     private JButton resetBtn;
 
 
-    public MainScreen(final Map<String, String> gameConfig) {
+    public MainScreen(final Map<String,String> gameConfig) {
         this.boardService = new BoardService(gameConfig);
     }
 
