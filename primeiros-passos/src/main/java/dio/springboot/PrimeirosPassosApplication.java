@@ -12,10 +12,17 @@ public class PrimeirosPassosApplication {
 		SpringApplication.run(PrimeirosPassosApplication.class, args);
 	}
 
+//	@Bean
+//	public CommandLineRunner run(SistemaMensagem sistema) {
+//		return args -> {
+//			sistema.enviarConfirmacao();
+//		};
+//	}
+
 	@Bean
-	public CommandLineRunner run(SistemaMensagem sistema) {
+	public CommandLineRunner run(MessageSystem system) {
 		return args -> {
-			sistema.enviarConfirmacao();
+			system.run();
 		};
 	}
 }
