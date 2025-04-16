@@ -1,0 +1,7 @@
+services:
+  pg:
+    container_name: dio-pg;
+    ports:
+      - "5432:5432"
+    env_file:
+      - "./src/main/resources/application.properties"
