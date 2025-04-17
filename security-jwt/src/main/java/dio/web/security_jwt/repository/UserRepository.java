@@ -8,7 +8,7 @@ import dio.web.security_jwt.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT u FROM users u WHERE u.username = :username", nativeQuery = true)
-    public void findByUsername(@Param("username") String username);    
+    public User findByUsername(@Param("username") String username);
 
-    public boolean existsByUsername();
+    public boolean existsByUsername(String username);
 }
