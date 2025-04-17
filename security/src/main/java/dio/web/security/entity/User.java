@@ -1,10 +1,13 @@
 package dio.web.security.entity;
 
 
+import java.util.Set;
+
 public class User {
     private String name;
     private String password;
     private final String username;
+    private Set<String> roles;
 
     public User(String name, String password, String username) {
         this.name = name;
@@ -14,6 +17,10 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
     }
 
     public void setName(String name) {
