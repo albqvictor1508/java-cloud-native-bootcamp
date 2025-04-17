@@ -21,7 +21,9 @@ public class WelcomeController {
         return "User authenticated";
     }
 
+    @GetMapping
+    @PreAuthorize("hasRole('MANAGER')")
     public String verifyManager() {
-
+        return "MANAGER authenticated";
     }
 }
