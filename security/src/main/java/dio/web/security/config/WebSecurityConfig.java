@@ -1,4 +1,4 @@
-package config;
+package dio.web.security.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
