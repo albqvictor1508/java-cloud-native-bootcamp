@@ -12,7 +12,7 @@ public class UserService {
     private UserRepository repository;
     private PasswordEncoder passwordEncoder;
 
-    public void save(User user) {
+    public void saveUser(User user) {
         String pass = user.getPassword();
         user.setPassword(passwordEncoder.encode(pass));
         repository.save(user);
