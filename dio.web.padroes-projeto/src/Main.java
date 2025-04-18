@@ -1,3 +1,4 @@
+import facade.Facade;
 import singleton.SingletonEager;
 import singleton.SingletonLazy;
 import singleton.SingletonLazyHolder;
@@ -36,5 +37,12 @@ public class Main {
         cachorro.setStrategy(rugidoAgressivo);
         System.out.println(cachorro.getStrategy());
         System.out.println("========= Strategy =======");
+
+        System.out.println("========= Facade =======");
+        Facade facade = Facade.getInstance();
+        long cep = 58340000;
+        facade.saveClient("victor", 18, cep);
+        System.out.println(facade.showClientByCep(cep));
+        System.out.println("========= Facade =======");
     }
 }
