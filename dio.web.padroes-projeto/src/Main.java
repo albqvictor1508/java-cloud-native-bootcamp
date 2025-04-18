@@ -30,8 +30,11 @@ public class Main {
         Rugido rugidoNormal = new RugidoNormal();
         Animal cachorro = new Animal();
         cachorro.setStrategy(rugidoNormal);
+        System.out.println(cachorro.getStrategy());
         cachorro.setStrategy(rugidoDefensivo);
+        System.out.println(cachorro.getStrategy());
         cachorro.setStrategy(rugidoAgressivo);
+        System.out.println(cachorro.getStrategy());
         System.out.println("========= Strategy =======");
     }
 }
