@@ -17,21 +17,13 @@ public class ClientService implements IClientService {
     private ViaCepService viaCepService;
 
     public Client findById(Long id) {
-        Client client = clientRepository.findById(id).orElse(null);
-        return client;
+        return clientRepository.findById(id).orElse(null);
     }
 
     @Override
     public Client updateClientById(Long id, Client c) {
         if(!clientRepository.existsById(id)) return null;
-
-        String cep = c.getAddress().getCep();
-        Address address = addressRepository.findById(cep).orElseGet(() -> {
-            Address newAddress = viaCepService.consultCep(cep);
-            addressRepository.save(newAddress);
-            return newAddress;
-        });
-        c.setAddress(address);
+        saveClientByCep(c);
         return clientRepository.updateClientById(id, c);
     }
 
@@ -40,13 +32,7 @@ public class ClientService implements IClientService {
     }
 
     public Client save(Client c) {
-        String cep = c.getAddress().getCep();
-        Address address = addressRepository.findById(cep).orElseGet(() -> {
-            Address newAddress = viaCepService.consultCep(cep);
-            addressRepository.save(newAddress);
-            return newAddress;
-        });
-        c.setAddress(address);
+        saveClientByCep(c);
         return clientRepository.save(c);
     }
 
@@ -55,5 +41,15 @@ public class ClientService implements IClientService {
             Client deletedClient = clientRepository.findById(id).get();
             clientRepository.deleteById(id);
             return deletedClient;
+        }
+
+        private void saveClientByCep(Client c) {
+            String cep = c.getAddress().getCep();
+            Address address = addressRepository.findById(cep).orElseGet(() -> {
+                Address newAddress = viaCepService.consultCep(cep);
+                addressRepository.save(newAddress);
+                return newAddress;
+            });
+            c.setAddress(address);
         }
 }
