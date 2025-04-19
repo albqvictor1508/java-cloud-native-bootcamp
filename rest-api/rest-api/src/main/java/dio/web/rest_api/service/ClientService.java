@@ -20,4 +20,8 @@ public class ClientService {
     public Iterable<Client> findAll() {
         return repository.findAll();
     }
+
+    public Client save(Client c) {
+        return repository.save(c);
+    }
 }

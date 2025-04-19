@@ -26,4 +26,8 @@ public class ClientController {
         if(client == null) return ResponseEntity.status(404).build();
         return ResponseEntity.status(200).body(client);
     }
+
+    public ResponseEntity<Client> createClient(Client c) {
+        return ResponseEntity.status(201).body(service.save(c));
+    }
 }
