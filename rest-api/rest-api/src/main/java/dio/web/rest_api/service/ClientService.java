@@ -23,8 +23,7 @@ public class ClientService implements IClientService {
     @Override
     public Client updateClientById(Long id, Client c) {
         if(!clientRepository.existsById(id)) return null;
-        saveClientByCep(c);
-        return clientRepository.updateClientById(id, c);
+        return saveClientByCep(c);
     }
 
     public Iterable<Client> findAll() {
@@ -32,8 +31,7 @@ public class ClientService implements IClientService {
     }
 
     public Client save(Client c) {
-        saveClientByCep(c);
-        return clientRepository.save(c);
+        return saveClientByCep(c);
     }
 
         public Client deleteClient(Long id) {
@@ -43,7 +41,7 @@ public class ClientService implements IClientService {
             return deletedClient;
         }
 
-        private void saveClientByCep(Client c) {
+        private Client saveClientByCep(Client c) {
             String cep = c.getAddress().getCep();
             Address address = addressRepository.findById(cep).orElseGet(() -> {
                 Address newAddress = viaCepService.consultCep(cep);
@@ -51,5 +49,6 @@ public class ClientService implements IClientService {
                 return newAddress;
             });
             c.setAddress(address);
+            return clientRepository.save(c);
         }
 }
