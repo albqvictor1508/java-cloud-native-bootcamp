@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
+    //faz a inversão de controle(pois instancia a classe e manipula seu objeto
+    // como um singleton), e injeção de dependência se necessário
     @Autowired
     private ClientService service;
 
