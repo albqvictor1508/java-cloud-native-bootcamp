@@ -1,40 +1,59 @@
 package dio.web.rest_api.service;
 
+import dio.web.rest_api.model.Address;
 import dio.web.rest_api.model.Client;
+import dio.web.rest_api.repository.AddressRepository;
 import dio.web.rest_api.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class ClientService implements IClientService {
     @Autowired
-    private ClientRepository repository;
+    private ClientRepository clientRepository;
+    @Autowired
+    private AddressRepository addressRepository;
+    @Autowired
+    private ViaCepService viaCepService;
 
     public Client findById(Long id) {
-        Client client = repository.findById(id).orElse(null);
+        Client client = clientRepository.findById(id).orElse(null);
         return client;
     }
 
     @Override
     public Client updateClientById(Long id, Client c) {
-        if(!(repository.existsById(id))) return null;
-        return repository.updateClientById(id, c);
+        if(!clientRepository.existsById(id)) return null;
+
+        String cep = c.getAddress().getCep();
+        Address address = addressRepository.findById(cep).orElseGet(() -> {
+            Address newAddress = viaCepService.consultCep(cep);
+            addressRepository.save(newAddress);
+            return newAddress;
+        });
+        c.setAddress(address);
+        return clientRepository.updateClientById(id, c);
     }
 
     public Iterable<Client> findAll() {
-        return repository.findAll();
+        return clientRepository.findAll();
     }
 
     public Client save(Client c) {
-        return repository.save(c);
+        String cep = c.getAddress().getCep();
+        Address address = addressRepository.findById(cep).orElseGet(() -> {
+            Address newAddress = viaCepService.consultCep(cep);
+            addressRepository.save(newAddress);
+            return newAddress;
+        });
+        c.setAddress(address);
+        return clientRepository.save(c);
     }
 
         public Client deleteClient(Long id) {
-            if(!(repository.existsById(id))) return null;
-            Client deletedClient = repository.findById(id).get();
-            repository.deleteById(id);
+            if(!(clientRepository.existsById(id))) return null;
+            Client deletedClient = clientRepository.findById(id).get();
+            clientRepository.deleteById(id);
             return deletedClient;
         }
 }
