@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class ClientService {
+public class ClientService implements IClientService {
     @Autowired
     private ClientRepository repository;
 

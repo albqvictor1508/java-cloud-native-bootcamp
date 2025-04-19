@@ -4,10 +4,7 @@ import dio.web.rest_api.model.Client;
 import dio.web.rest_api.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/clients")
@@ -27,7 +24,8 @@ public class ClientController {
         return ResponseEntity.status(200).body(client);
     }
 
-    public ResponseEntity<Client> createClient(Client c) {
+    @PostMapping
+    public ResponseEntity<Client> createClient(@RequestBody Client c) {
         return ResponseEntity.status(201).body(service.save(c));
     }
 }
