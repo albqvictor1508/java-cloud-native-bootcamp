@@ -13,10 +13,7 @@ public class ClientService {
     private ClientRepository repository;
 
     public Client findById(Long id) {
-        if(!(repository.existsById(id))) {
-            return null;
-        }
-        Client client = repository.findById(id).get();
+        Client client = repository.findById(id).orElse(null);
         return client;
     }
 
