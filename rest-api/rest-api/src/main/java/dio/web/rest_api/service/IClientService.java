@@ -6,4 +6,5 @@ public interface IClientService {
     Client save(Client c);
     Iterable<Client> findAll();
     Client findById(Long id);
+    Client updateClientById(Long id, Client c);
 }

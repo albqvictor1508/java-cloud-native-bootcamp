@@ -17,6 +17,12 @@ public class ClientService implements IClientService {
         return client;
     }
 
+    @Override
+    public Client updateClientById(Long id, Client c) {
+        if(!(repository.existsById(id))) return null;
+        return repository.updateClientById(id, c);
+    }
+
     public Iterable<Client> findAll() {
         return repository.findAll();
     }
@@ -24,4 +30,11 @@ public class ClientService implements IClientService {
     public Client save(Client c) {
         return repository.save(c);
     }
+
+        public Client deleteClient(Long id) {
+            if(!(repository.existsById(id))) return null;
+            Client deletedClient = repository.findById(id).get();
+            repository.deleteById(id);
+            return deletedClient;
+        }
 }

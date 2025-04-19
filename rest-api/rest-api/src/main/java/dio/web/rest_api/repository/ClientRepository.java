@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository //não precisa colocar se n quiser
 public interface ClientRepository extends JpaRepository<Client, Long> {
+    Client updateClientById(Long id, Client c);
 }

@@ -28,4 +28,22 @@ public class ClientController {
     public ResponseEntity<Client> createClient(@RequestBody Client c) {
         return ResponseEntity.status(201).body(service.save(c));
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateClient(@PathVariable Long id, @RequestBody Client c) {
+        Client updatedClient = service.updateClientById(id, c);
+        if(updatedClient == null) {
+            return ResponseEntity.status(404).body("id not founded");
+        }
+        return ResponseEntity.status(200).body(updatedClient);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteClient(@PathVariable Long id) {
+        Client deletedClient = service.deleteClient(id);
+        if(deletedClient == null) {
+            return ResponseEntity.status(404).body("id not founded");
+        }
+        return ResponseEntity.status(200).body(deletedClient);
+    }
 }
