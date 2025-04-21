@@ -1,0 +1,9 @@
+services:
+  sql-mariadb:
+    image: mariadb
+    ports:
+      - "6000:3306"
+    environment:
+      - MARIADB_USER=adm
+      - MARIADB_PASSWORD=sql
+      - MARIADB_DB=learning-sql
