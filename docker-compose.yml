@@ -4,6 +4,7 @@ services:
     ports:
       - "6000:3306"
     environment:
-      - MARIADB_USER=adm
-      - MARIADB_PASSWORD=sql
-      - MARIADB_DB=learning-sql
+      - MARIADB_USER=victor
+      - MARIADB_PASSWORD=victor123
+      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
+      - MARIADB_DATABASE=learning-sql
