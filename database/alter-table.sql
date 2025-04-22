@@ -16,3 +16,7 @@ FOREIGN KEY(destiny_id) REFERENCES destinies(id);
 ALTER TABLE destinies
 MODIFY COLUMN id INT AUTO_INCREMENT,
 ADD PRIMARY KEY (id);
+
+ALTER TABLE reserves
+ADD CONSTRAINT fk_reserves_destinies
+FOREIGN KEY(destiny_id) REFERENCES destinies (id);
