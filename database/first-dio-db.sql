@@ -6,3 +6,8 @@ CREATE TABLE users (
   birth_date DATE NOT NULL
 );
 
+CREATE TABLE destinies (
+	id INT,
+  name VARCHAR(100) NOT NULL,
+  description VARCHAR(255) NOT NULL
+);
