@@ -1,0 +1,3 @@
+ALTER TABLE users RENAME userss;
+
+ALTER TABLE users MODIFY COLUMN address VARCHAR(150);
