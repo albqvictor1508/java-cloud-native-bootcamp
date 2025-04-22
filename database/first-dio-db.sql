@@ -5,7 +5,7 @@ CREATE TABLE users (
   address VARCHAR(50) NOT NULL,
   birth_date DATE NOT NULL
 );
-
+N
 CREATE TABLE destinies (
 	id INT,
   name VARCHAR(100) NOT NULL,
