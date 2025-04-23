@@ -8,3 +8,8 @@ services:
       - MARIADB_PASSWORD=victor123
       - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
       - MARIADB_DATABASE=learning-sql
+    volumes:
+      - mariadb_volume:/var/lib/mysql
+
+volumes: 
+  mariadb_volume:
