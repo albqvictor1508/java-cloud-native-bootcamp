@@ -12,3 +12,14 @@ SELECT COUNT(DISTINCT user_id) AS total_users_with_reserves
 FROM users u 
 INNER JOIN reserves r ON r.id = u.id;
 -- vai contar todos os users que tem reservas, DISTINCT = não vai contar com user id repetido, sem o distinct somaria os repetido e cagava tudo
+
+SELECT MAX(TIMESTAMPDIFF(YEAR, birth_date, CURRENT_DATE())) FROM users;
+
+SELECT COUNT(*) AS total_reserves, destiny_id
+FROM reserves
+GROUP BY destiny_id;
+
+SELECT COUNT(*) AS total_reserves, user_id
+FROM reserves
+GROUP BY user_id;
+-- Retorna o total de reservas por id de usuário, ou seja, usando o group by, o count vai executar de acordo com os ids
