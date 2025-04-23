@@ -8,3 +8,7 @@ SELECT * FROM reserves r
 INNER JOIN users u ON r.user_id = u.id
 INNER JOIN destinies d ON r.destiny_id = d.id
 WHERE u.id = 2;
+
+SELECT * FROM users u
+LEFT JOIN  reserves r ON r.user_id = u.id
+WHERE u.id = 1;
