@@ -1,0 +1,1 @@
+SELECT name, (SELECT COUNT(*) FROM reserves r WHERE r.user_id = u.id) AS total FROM users u;
