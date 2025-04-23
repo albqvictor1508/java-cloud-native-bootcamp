@@ -29,3 +29,13 @@ ADD CONSTRAINT fk_reserves_destinies
 FOREIGN KEY(destiny_id) REFERENCES destinies (id);
 
 
+ALTER TABLE users
+ADD birth_date DATE NOT NULL;
+
+UPDATE users
+SET birth_date = "2006-11-08"
+WHERE id = 2;
+
+UPDATE users
+SET birth_date = "2007-08-15"
+WHERE id = 2;
