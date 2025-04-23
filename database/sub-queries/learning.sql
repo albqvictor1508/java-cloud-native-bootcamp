@@ -1,1 +1,2 @@
-SELECT name, (SELECT COUNT(*) FROM reserves r WHERE r.user_id = u.id) AS total FROM users u;
+SELECT id, name, (SELECT COUNT(*) FROM reserves r WHERE r.user_id = u.id) AS total FROM users u;
+-- Entre parênteses, uma sub query que conta todos as reservas feitas no id daquele usuário, com um alias nomeando essa subquery como o atributo "total" na tabela. 
