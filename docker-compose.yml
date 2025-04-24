@@ -2,9 +2,14 @@ name: learning-mongodb
 
 services:
   my-mongo:
-    image: mongodb
+    image: mongo
     container_name: my_mongo_container
     restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=victor
       - MONGO_INITDB_ROOT_USERNAME=vitoadm
+    volumes:
+      - mongodb_volume:/data/db
+
+volumes:
+  mongodb_volume:
