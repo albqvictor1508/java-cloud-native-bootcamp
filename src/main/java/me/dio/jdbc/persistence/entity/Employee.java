@@ -7,7 +7,7 @@ import java.time.OffsetDateTime;
 
 @Data
 public class Employee {
-    private long id;
+    private Long id;
     private BigDecimal salary;
     private String name;
     private OffsetDateTime birthday;
