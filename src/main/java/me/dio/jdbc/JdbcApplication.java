@@ -14,7 +14,7 @@ public class JdbcApplication {
 				.dataSource("jdbc:mysql://localhost:6000/jdbc-basics", "root", "mysql-pass")
 				.load();
 		flyway.migrate();
-		
+
 		SpringApplication.run(JdbcApplication.class, args);
 	}
 
