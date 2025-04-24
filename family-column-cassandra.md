@@ -23,4 +23,3 @@
   igual o sql
 
 ### Update e o resto das ideia é tudo igual o SQL, além disso, esse banco aceita até json puro
-
