@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   sql-mariadb:
     image: mariadb
@@ -13,3 +14,8 @@ services:
 
 volumes: 
   mariadb_volume:
+=======
+name: learning-mongodb
+
+services:
+>>>>>>> e2ca068ab63cb94b5ee51b3cfb2e7f8664c40b10
