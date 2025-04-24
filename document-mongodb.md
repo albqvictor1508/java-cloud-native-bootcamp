@@ -56,3 +56,7 @@ Não significa que o MongoDB é pior por isso, só não é adaptado para esse ti
 ### Atualize apenas os campos alterados, e não do JSON completo
 
 ### Evitar fazer queries com negação, o mongoDB n tem suporte nativo a isso, ele vai varrer o banco todo
+
+## Diference between JSON and BSON (JSON vs BSON)
+
+- JSON só tem suporte aos tipos primitivos (string, number, boolean e tudo mais), já BSON tem mais funcionalidades, como o ObjectId() para id e o tipo Date 
