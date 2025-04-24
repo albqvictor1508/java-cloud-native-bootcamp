@@ -6,7 +6,7 @@ services:
     container_name: my_mongo_container
     ports:
       - "27017:27017"
-    restart: always
+    restart: always #meio sus isso, se subir com erro vai ficar recursivo
     environment:
       - MONGO_INITDB_ROOT_USERNAME=victor
       - MONGO_INITDB_ROOT_PASSWORD=vitoadm
@@ -16,4 +16,4 @@ services:
 volumes:
   mongodb_volume:
 
-#mongo --host 127.0.0.1:27017 -p vitoadm -u victor
+# mongo --host 127.0.0.1:27017 -p vitoadm -u victor
