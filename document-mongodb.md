@@ -42,3 +42,17 @@ Não significa que o MongoDB é pior por isso, só não é adaptado para esse ti
 ### Mongo DB Compass tried to download but not works
 
 ### create a cluster
+
+### Mongo DB não é bom para relacionamentos, porque não possui foreign key, mesmo que possua outros mecanismos de relacionamento, não é recomendável
+
+## Better Pratics
+
+### evitar documentos grandes, torna a query muito pesada
+
+### use nomes objetivos e curtos
+
+### analisar as queries com o explain()
+
+### Atualize apenas os campos alterados, e não do JSON completo
+
+### Evitar fazer queries com negação, o mongoDB n tem suporte nativo a isso, ele vai varrer o banco todo
