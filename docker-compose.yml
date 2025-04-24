@@ -15,3 +15,5 @@ services:
 
 volumes:
   mongodb_volume:
+
+#mongo --host 127.0.0.1:27017 -p vitoadm -u victor
