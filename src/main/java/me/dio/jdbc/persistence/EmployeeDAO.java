@@ -1,21 +1,113 @@
 package me.dio.jdbc.persistence;
 
 import me.dio.jdbc.persistence.entity.Employee;
+import com.mysql.cj.jdbc.StatementImpl;
+
+import java.sql.SQLException;
+import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.time.ZoneOffset.UTC;
 
 public class EmployeeDAO {
 
-    public void insert(final Employee e) {
-
+    public void insert(final Employee entity){
+        try(
+                var connection = ConnectionUtil.getConnection();
+                var statement = connection.createStatement()
+        ){
+            var sql = "INSERT INTO employees (name, salary, birthday) values ('" +
+                    entity.getName() + "', " +
+                    entity.getSalary().toString() + ", " +
+                    "'" + formatOffsetDateTime(entity.getBirthday()) + "' )";
+            statement.executeUpdate(sql);
+            if (statement instanceof StatementImpl impl)
+                entity.setId(impl.getLastInsertID());
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
     }
 
-    public Employee findById(final Long id) {
-        return null;
+    public void update(final me.dio.jdbc.persistence.entity.Employee entity){
+        try(
+                var connection = ConnectionUtil.getConnection();
+                var statement = connection.createStatement()
+        ){
+            var sql = "UPDATE employees set " +
+                    "name     = '" + entity.getName() + "'," +
+                    "salary   = " + entity.getSalary().toString() + "," +
+                    "birthday = '" + formatOffsetDateTime(entity.getBirthday()) + "'" +
+                    "WHERE id = " + entity.getId();
+            statement.executeUpdate(sql);
+            System.out.printf("Foram afetados %s registros na base de dados", statement.getUpdateCount());
+            if (statement instanceof StatementImpl impl)
+                entity.setId(impl.getLastInsertID());
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
     }
 
-    public Employee update(final Employee e) {
-        return null;
+    public void delete(final long id){
+        try(
+                var connection = ConnectionUtil.getConnection();
+                var statement = connection.createStatement()
+        ){
+            var sql = "DELETE FROM employees WHERE id = " + id;
+            statement.executeUpdate(sql);
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
     }
 
-    public void delete(final Long id) {
+    public List<Employee> findAll(){
+        List<Employee> entities = new ArrayList<>();
+        try(
+                var connection = ConnectionUtil.getConnection();
+                var statement = connection.createStatement()
+        ){
+            statement.executeQuery("SELECT * FROM employees ORDER BY name");
+            var resultSet = statement.getResultSet();
+            while (resultSet.next()){
+                var entity = new Employee();
+                entity.setId(resultSet.getLong("id"));
+                entity.setName(resultSet.getString("name"));
+                entity.setSalary(resultSet.getBigDecimal("salary"));
+                var birthdayInstant = resultSet.getTimestamp("birthday").toInstant();
+                entity.setBirthday(OffsetDateTime.ofInstant(birthdayInstant, UTC));
+                entities.add(entity);
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+        return entities;
     }
+
+    public Employee findById(final long id){
+        var entity = new Employee();
+        try(
+                var connection = ConnectionUtil.getConnection();
+                var statement = connection.createStatement()
+        ){
+            statement.executeQuery("SELECT * FROM employees WHERE id = " + id);
+            var resultSet = statement.getResultSet();
+            if (resultSet.next()){
+                entity.setId(resultSet.getLong("id"));
+                entity.setName(resultSet.getString("name"));
+                entity.setSalary(resultSet.getBigDecimal("salary"));
+                var birthdayInstant = resultSet.getTimestamp("birthday").toInstant();
+                entity.setBirthday(OffsetDateTime.ofInstant(birthdayInstant, UTC));
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+        return entity;
+    }
+
+    private String formatOffsetDateTime(final OffsetDateTime dateTime){
+        var utcDatetime = dateTime.withOffsetSameInstant(UTC);
+        return utcDatetime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+    }
+
 }
