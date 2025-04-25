@@ -4,4 +4,4 @@ services:
     ports:
       - "6000:3306"
     env_file:
-      - .env
+     - .env
