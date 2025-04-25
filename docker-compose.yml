@@ -10,16 +10,39 @@ services:
       - MARIADB_PASSWORD=victor123
       - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
       - MARIADB_DATABASE=learning-sql
+<<<<<<< HEAD
+=======
     volumes:
       - mariadb_volume:/var/lib/mysql
 
 volumes: 
   mariadb_volume:
+>>>>>>> 1bda0cf8b50d188977a52e73f8c77452c2659965
 =======
 name: learning-mongodb
 
 services:
+<<<<<<< HEAD
+  my-mongo:
+    image: mongo
+    container_name: my_mongo_container
+    ports:
+      - "27017:27017"
+    restart: always #meio sus isso, se subir com erro vai ficar recursivo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=victor
+      - MONGO_INITDB_ROOT_PASSWORD=vitoadm
+    volumes:
+      - mongodb_volume:/data/db
+
+volumes:
+  mongodb_volume:
+
+# mongo --host 127.0.0.1:27017 -p vitoadm -u victor
+>>>>>>> 8703b3b14806331d6237ca2c30b622607eac5792
+=======
 >>>>>>> e2ca068ab63cb94b5ee51b3cfb2e7f8664c40b10
+<<<<<<< HEAD
 =======
 services:
   my-sql:
@@ -29,3 +52,6 @@ services:
     env_file:
       - .env
 >>>>>>> 4fbfe9a2d12dadb7f16426a1be3a0d0f7908dbae
+=======
+>>>>>>> 1bda0cf8b50d188977a52e73f8c77452c2659965
+>>>>>>> eae8022d8109e84cb3c60258fa947e4bcaccb619
