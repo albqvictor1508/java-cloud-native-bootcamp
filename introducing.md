@@ -7,9 +7,15 @@
 *** Quando faz sentido para minha empresa?? ***
 
  - Aumento de produtividade
- -
- -
- -
+ - Oferece os ingredientes e você paga por oque tá usando para construir suas coisas
+
+ *** Nuvem privada ***
+Ambiente em núvem disponível apenas para mim, só meu
+
+  Ex.: Meu próprio data center, com minhas maquinas lá
+
+*** Nuvem Pública ***
+
 ## Shared Responsability
 
 ## Cloud Models
