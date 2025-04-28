@@ -1,0 +1,5 @@
+## Escalabilidade
+
+## Segurança
+
+## Elasticidade
