@@ -12,3 +12,5 @@ Fornece algo pronto para a implementação no projeto
 
 ## SaaS
   ***Software as a Service***
+
+  Aplicativo como serviço, ou seja, uma aplicativo como serviço, que entrega algo ao usuário
