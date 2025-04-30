@@ -18,4 +18,10 @@
 
 - Já no Cloud, é possível permitir acesso ou bloquear ações em serviços, entre outros
 
+### Confiança Zero
+
+"Desconfie de todos e não confie em ninguém"
+
+Esse conceito na área de Cloud nos trás a ideia de que é necessário que o usuário tenha a mínima permissão necessária, além de que garantir que essa permissão está sendo validada
+
 ## Microsoft Entra ID
