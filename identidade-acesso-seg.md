@@ -28,4 +28,9 @@ Esse conceito na área de Cloud nos trás a ideia de que é necessário que o us
 
 É o serviço de gerenciamento de identidades e acesso baseado em nuvem do Azure
 
+- Autenticação ()
+- Logon Único (SSO)
+- Gerenciamento de aplicativos
+- Negócios para Negócios (B2B)
+- Gerenciamento de dispositivos
 ## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
