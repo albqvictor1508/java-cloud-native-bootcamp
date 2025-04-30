@@ -45,3 +45,9 @@ Execute aplicativos herdados (que não podem utilizar os padrões de autenticaç
 Sincronizar automaticamente a partir do Microsoft Entra ID
 
 ## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
+
+### Autenticação
+
+- Identifica a pessoa ou serviço buscando acesso a um recurso.
+- Solicita credenciais de acesso legítimo
+- Base para criar princípios de identidade e controle de acesso seguros.
