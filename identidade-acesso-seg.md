@@ -25,3 +25,5 @@
 Esse conceito na área de Cloud nos trás a ideia de que é necessário que o usuário tenha a mínima permissão necessária, além de que garantir que essa permissão está sendo validada
 
 ## Microsoft Entra ID
+
+## Microsoft Defender for Cloud
