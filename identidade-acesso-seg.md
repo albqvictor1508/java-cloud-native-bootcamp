@@ -26,4 +26,4 @@ Esse conceito na área de Cloud nos trás a ideia de que é necessário que o us
 
 ## Microsoft Entra ID
 
-## Microsoft Defender for Cloud
+## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
