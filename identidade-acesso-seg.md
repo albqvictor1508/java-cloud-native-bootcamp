@@ -42,4 +42,6 @@ Obtenha os benefícios dos serviços de domínio baseados em nuvem sem gerenciar
 
 Execute aplicativos herdados (que não podem utilizar os padrões de autenticação modernos) em nuvem
 
+Sincronizar automaticamente a partir do Microsoft Entra ID
+
 ## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
