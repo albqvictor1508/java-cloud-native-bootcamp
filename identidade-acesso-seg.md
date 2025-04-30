@@ -24,6 +24,8 @@
 
 Esse conceito na área de Cloud nos trás a ideia de que é necessário que o usuário tenha a mínima permissão necessária, além de que garantir que essa permissão está sendo validada
 
-## Microsoft Entra ID
+## Microsoft Entra ID - Antigo Microsoft Active Directory
+
+É o serviço de gerenciamento de identidades e acesso baseado em nuvem do Azure
 
 ## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
