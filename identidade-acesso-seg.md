@@ -12,4 +12,10 @@
 
 - Descrever o controle de acesso baseado em função (RBAC).
 
+### Cloud vs On-premise
+
+- A pessoa que tem acesso no On-premise, acessa tudo
+
+- Já no Cloud, é possível permitir acesso ou bloquear ações em serviços, entre outros
+
 ## Microsoft Entra ID
