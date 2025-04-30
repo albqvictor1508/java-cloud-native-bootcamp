@@ -36,4 +36,10 @@ Esse conceito na área de Cloud nos trás a ideia de que é necessário que o us
 
 tudo isso é responsabilidade da Azure
 
+## Domain Services
+
+Obtenha os benefícios dos serviços de domínio baseados em nuvem sem gerenciar os controladores de domínio.
+
+Execute aplicativos herdados (que não podem utilizar os padrões de autenticação modernos) em nuvem
+
 ## Microsoft Defender for Cloud - Cloud Native (nativa de núvem)
