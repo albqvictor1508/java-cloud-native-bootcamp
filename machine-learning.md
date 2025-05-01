@@ -11,3 +11,5 @@ Monitoramento de vídeos, reconhecimento facial, reconhecimento de documentos, s
 # Processamento de Linguagem Natural
 
 Capacidades da IA para que um computador interprete a linguagem escrita ou falada e responda adequadamente.
+
+Análise de sentimentos, captar oque está sendo escrito em uma mensagem e definir se é ou não ofensiva, analisar as preferências do usuários para melhores anúncios, entre outros
