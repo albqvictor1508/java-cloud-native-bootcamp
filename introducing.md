@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AZ-900 | Introducing Microsoft Azure
 
 ## What is Cloud Computing
@@ -21,3 +22,8 @@ Ambiente em núvem disponível apenas para mim, só meu
 ## Cloud Models
 
 ## Capital Costs vs Operacional Costs
+=======
+# Artificial Inteligence (AI)
+
+Prever resultados e reconhecer padrões com base em dados históricos
+>>>>>>> 77f396b600e74b402959cfd840b1432120b08faa
