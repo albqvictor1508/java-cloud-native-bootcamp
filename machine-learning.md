@@ -39,3 +39,5 @@ Deixando as informações enriquecidas plausíveis de exploração (chatbots, en
 Muito parecido com input processing e output, fluxo padrão na programação
 
 # IA Generativa
+
+Recursos de IA que criam conteúdo original em vários formatos, incluindo linguagem natural, imagemm código e muito mais.
