@@ -21,3 +21,5 @@ Capacidades de IA que lidam com o gerenciamento, processamento e uso de grandes 
 Análise de documentos, transcrição de documento, interpretação de um documento
 
 # Mineração de Conhecimento
+
+Capacidades de IA para extrair informações de grandes volumes de dados muitas vezes não estruturados para criar um armazenamento de conhecimento pesquisável
