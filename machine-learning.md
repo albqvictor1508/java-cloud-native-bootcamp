@@ -45,3 +45,5 @@ Recursos de IA que criam conteúdo original em vários formatos, incluindo lingu
 Uma IA que realmente aprende, onde é vista a linguagem natural.
 
     Ex.: Grok, Claude, ChatGPT, Gemini, Midjourney
+
+# Imparcialidade
