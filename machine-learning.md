@@ -57,3 +57,13 @@ Uma IA que realmente aprende, onde é vista a linguagem natural.
 ## Exemplo
 
 1. Um modelo de aprovação de empréstimos que discrimina por gênero devido ao preconceito nos dados com os quais foi treinado.
+
+# Confiabilidade e Segurança
+
+## Desafio ou Risco
+
+1. O preconceito pode afetar os resultados.
+
+## Exemplo
+
+1. Um modelo de aprovação de empréstimos que discrimina por gênero devido ao preconceito nos dados com os quais foi treinado.
