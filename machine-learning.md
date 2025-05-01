@@ -47,3 +47,5 @@ Uma IA que realmente aprende, onde é vista a linguagem natural.
     Ex.: Grok, Claude, ChatGPT, Gemini, Midjourney
 
 # Imparcialidade
+
+![alt text](image.png)
