@@ -19,3 +19,5 @@ Análise de sentimentos, captar oque está sendo escrito em uma mensagem e defin
 Capacidades de IA que lidam com o gerenciamento, processamento e uso de grandes volumes de dados encontrados em formulários e documentos.
 
 Análise de documentos, transcrição de documento, interpretação de um documento
+
+# Mineração de Conhecimento
