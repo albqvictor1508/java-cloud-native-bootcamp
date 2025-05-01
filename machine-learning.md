@@ -23,3 +23,16 @@ Análise de documentos, transcrição de documento, interpretação de um docume
 # Mineração de Conhecimento
 
 Capacidades de IA para extrair informações de grandes volumes de dados muitas vezes não estruturados para criar um armazenamento de conhecimento pesquisável
+
+## Ingerir
+
+Adicionar dados (banco de dados, imagens, vídeos, entre outros)
+
+## Enriquecer
+
+Oque será feito com esses dados, e oque esses dados são (a finalidade desses dados)
+
+## Explorar
+
+Deixando as informações enriquecidas plausíveis de exploração (chatbots, entre outras soluções de IA)
+
