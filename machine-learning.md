@@ -41,3 +41,7 @@ Muito parecido com input processing e output, fluxo padrão na programação
 # IA Generativa
 
 Recursos de IA que criam conteúdo original em vários formatos, incluindo linguagem natural, imagemm código e muito mais.
+
+Uma IA que realmente aprende, onde é vista a linguagem natural.
+
+    Ex.: Grok, Claude, ChatGPT, Gemini, Midjourney
