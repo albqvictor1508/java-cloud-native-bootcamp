@@ -36,3 +36,6 @@ Oque será feito com esses dados, e oque esses dados são (a finalidade desses d
 
 Deixando as informações enriquecidas plausíveis de exploração (chatbots, entre outras soluções de IA)
 
+Muito parecido com input processing e output, fluxo padrão na programação
+
+# IA Generativa
