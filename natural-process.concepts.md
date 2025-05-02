@@ -34,3 +34,13 @@ Event = Entity value: trip, Confidence = 74,00%
 Location = Entity value: Seattle, Confidence = 74,00%
 
 DateTime = Entity value: last week, Confidence = 80,00%
+
+### PII e PHI
+
+URL = 
+
+PhoneNumber =  
+
+Email = 
+
+Organization =
