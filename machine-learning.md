@@ -77,3 +77,4 @@ Uma IA que realmente aprende, onde é vista a linguagem natural.
 ## Exemplo
 
 1. Um bot de diagnóstico médico é treinado usando dados confidenciais de pacientes, que são armazenados de forma insegura.
+
