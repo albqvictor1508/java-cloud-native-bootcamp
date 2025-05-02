@@ -27,7 +27,7 @@ Análise de sentimentos conectando músicas à filmes, escolhendo os anúncios c
 
 ### NER (Reconhecimento de Entidade Nomeada)
 
-    Ex.: I had a wonderful trip to Seattle last week.
+    Original Text: I had a wonderful trip to Seattle last week.
 
 Event = Entity value: trip, Confidence = 74,00%
 
