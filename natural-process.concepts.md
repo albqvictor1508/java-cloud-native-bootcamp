@@ -24,3 +24,13 @@ Análise de sentimentos conectando músicas à filmes, escolhendo os anúncios c
 ## Processamento de Linguagem Natural e IA Conversacional da Azure
 
 - Azure Language Studio
+
+### NER (Reconhecimento de Entidade Nomeada)
+
+    Ex.: I had a wonderful trip to Seattle last week.
+
+Event = Entity value: trip, Confidence = 74,00%
+
+Location = Entity value: Seattle, Confidence = 74,00%
+
+DateTime = Entity value: last week, Confidence = 80,00%
