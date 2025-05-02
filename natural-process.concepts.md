@@ -13,3 +13,5 @@
 **Fluxo abaixo:**
 
 ![alt text](image-1.png)
+
+Análise de sentimentos conectando músicas à filmes, escolhendo os anúncios corretos, é utilizado para captar a personalidade do usuário e mantê-lo na aplicação
