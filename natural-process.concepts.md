@@ -7,3 +7,9 @@
 ### Objetivos de Aprendizado
 
 - Reconheça quando o processamento de linguagem natural e IA conversacional podem ser usados.
+
+## Oque é?
+
+**Fluxo abaixo:**
+
+![alt text](image-1.png)
