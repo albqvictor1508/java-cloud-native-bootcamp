@@ -22,3 +22,5 @@ Análise de sentimentos conectando músicas à filmes, escolhendo os anúncios c
 - IA Conversacional
 
 ## Processamento de Linguagem Natural e IA Conversacional da Azure
+
+- Azure Language Studio
