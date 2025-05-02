@@ -69,3 +69,11 @@ Uma IA que realmente aprende, onde é vista a linguagem natural.
 1. Um veículo autônomo sofre uma falha no sistema e causa uma colisão.
 
 # Privacidade e segurança
+
+## Desafio ou Risco
+
+1. Dados privados podem ser expostos.
+
+## Exemplo
+
+1. Um veículo autônomo sofre uma falha no sistema e causa uma colisão.
