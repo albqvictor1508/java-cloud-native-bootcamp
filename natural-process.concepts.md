@@ -20,3 +20,5 @@ Análise de sentimentos conectando músicas à filmes, escolhendo os anúncios c
 - Tradução à maquina
 - Sumarização
 - IA Conversacional
+
+## Processamento de Linguagem Natural e IA Conversacional da Azure
