@@ -25,5 +25,15 @@ Ambiente em núvem disponível apenas para mim, só meu
 =======
 # Artificial Inteligence (AI)
 
+<<<<<<< HEAD
 Prever resultados e reconhecer padrões com base em dados históricos
 >>>>>>> 77f396b600e74b402959cfd840b1432120b08faa
+=======
+- Prever resultados e reconhecer padrões com base em dados históricos.
+
+- Extrair informações de fontes para obter conhecimento. 
+
+- Compreender a linguagem e participar de conversas.
+
+- Reconhecimento de Eventos anormais e tomada de decisão.
+>>>>>>> b456b33da71d08e4cec233718a8d74b363644fbf
